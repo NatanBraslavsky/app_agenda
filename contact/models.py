@@ -1,12 +1,16 @@
 from django.db import models
 from django.utils import timezone
 
+#criar uma entidade
 class Category(models.Model):
+    #cria um atributo
     name = models.CharField(max_length=50)
     def __str__(self):
         return f'{self.name}'
 
+#criar uma entidade
 class Contact(models.Model):
+    #cria um atributo
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50, blank=True)
     phone = models.CharField(max_length=50)
