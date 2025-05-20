@@ -5,6 +5,7 @@ from contact.models import Contact
 
 
 def create(request):
+    post = request.POST
     context = {
 
     }
