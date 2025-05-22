@@ -9,7 +9,6 @@ class ContactForm(forms.ModelForm):
         widget=forms.TextInput(
             attrs={
                 'class': 'classe-a classe-b',
-                'placeholder': 'Aqui veio do init',
             }
         ),
         label='Primeiro Nome',
@@ -26,7 +25,7 @@ class ContactForm(forms.ModelForm):
 
     class Meta:
         model = models.Contact
-        fields = ('first_name','last_name', 'phone',)
+        fields = ('first_name','last_name', 'phone','email', 'description', 'category',)
         # widgets = {
         #     'first_name': forms.TextInput(attrs={
         #         'class':'class-a class-b',
