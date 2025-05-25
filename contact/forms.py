@@ -2,6 +2,7 @@ from re import I
 from django import forms
 from django.core.exceptions import ValidationError
 from . import models
+from django.contrib.auth.forms import UserCreationForm
 
 class ContactForm(forms.ModelForm):
     picture = forms.ImageField(widget=forms.FileInput(attrs={'accept':'image/*',}))
@@ -26,3 +27,6 @@ class ContactForm(forms.ModelForm):
             self.add_error('first_name', ValidationError('Não digite "ABC" neste campo', code='invalid'))
 
         return first_name
+    
+class RegisterForm(UserCreationForm):
+    ...
