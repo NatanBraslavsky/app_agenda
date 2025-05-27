@@ -17,7 +17,9 @@ def create(request):
             'form_action': form_action
         }
         if form.is_valid():
-            contact = form.save()
+            contact = form.save(commit=False)
+            contact.owner = request.user
+            contact.save()
             return redirect('contact:update', contact_id= contact.pk)
 
         return render(request, 'contact/create.html',context)#direcionar a url do html
@@ -31,7 +33,7 @@ def create(request):
 @login_required(login_url='contact:login')
 
 def update(request, contact_id):
-    contact = get_object_or_404(Contact, pk=contact_id, show=True)
+    contact = get_object_or_404(Contact, pk=contact_id, show=True, owner=request.user)
     form_action = reverse('contact:update', args=(contact_id,))
 
     if request.method == 'POST':
@@ -54,7 +56,7 @@ def update(request, contact_id):
 
 @login_required(login_url='contact:login')
 def delete(request, contact_id):
-    contact = get_object_or_404(Contact, pk=contact_id, show=True)
+    contact = get_object_or_404(Contact, pk=contact_id, show=True, owner=request.user)
     confirmation = request.POST.get('confirmation', 'no')
     if confirmation == 'yes':
         contact.delete()
@@ -64,5 +66,5 @@ def delete(request, contact_id):
         'contact':contact,
         'confirmation' : confirmation,
     }
-    )
+)
     
