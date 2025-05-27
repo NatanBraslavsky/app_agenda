@@ -7,7 +7,7 @@ urlpatterns = [
     path('', views.index, name='index'),#definir o caminho
     path('search/', views.search, name='search'),
 
-    #crud
+    #contact(crud)
     path('contact/<int:contact_id>/', views.contact, name='contact'),
     path('contact/create/', views.create, name='create'),
     path('contact/<int:contact_id>/update/', views.update, name='update'),

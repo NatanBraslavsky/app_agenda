@@ -30,7 +30,7 @@ def user_update(request):
         return render(request,'contact/user_update.html',{'form': form})
     
     form.save()
-    return redirect('contact:user_update')
+    return redirect('contact:index')
 
 def login_view(request):
     form = AuthenticationForm(request)
