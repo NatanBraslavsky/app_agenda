@@ -23,32 +23,32 @@ Ultimamente tenho focado grande parte do meu tempo nos meus estudos em Python e 
 
 1. Clone o repositório:
 
-git clone https://github.com/natanbraslavsky/app_agenda.git
+```git clone https://github.com/natanbraslavsky/app_agenda.git```
 
 
 2. Instale as dependências:
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 
 
 3. Aplique as migrações:
 
-python manage.py migrate
+```python manage.py migrate```
 
 
 (Opcional) Gere dados de teste:
 
 
-python utils/create_contacts.py
+```python utils/create_contacts.py```
 
 
 4. Inicie o servidor de desenvolvimento:
 
-python manage.py runserver
+```python manage.py runserver```
 
 
 5. Acesse no navegador:
 
 
-http://127.0.0.1:8000/
+```http://127.0.0.1:8000/```
