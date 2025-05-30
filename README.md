@@ -3,9 +3,9 @@ Ultimamente tenho focado grande parte do meu tempo nos meus estudos em Python e 
 
 # 🧠Funcionalidades
 
-✅ Cadastro, visualização, edição, remoção e busca de contatos
-✅ Fotos de perfil, com tratamento de imagens utilizando a biblioteca Pillow
-✅ Contatos fictícios para testes, com uso do pacote Faker
+✅ Cadastro, visualização, edição, remoção e busca de contatos<br>
+✅ Fotos de perfil, com tratamento de imagens utilizando a biblioteca Pillow<br>
+✅ Contatos fictícios para testes, com uso do pacote Faker<br>
 ✅ Controle de acesso: apenas usuários autenticados têm permissão para gerenciar seus próprios contatos
 
 # 🛠️Tecnologias:
